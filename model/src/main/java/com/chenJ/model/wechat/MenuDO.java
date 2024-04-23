@@ -1,0 +1,45 @@
+package com.chenJ.model.wechat;
+
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.chenJ.model.base.BaseEntity;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+
+/**
+ * Created with IntelliJ IDEA.
+ *
+ * @author : chenJ
+ * @Project : chenJ-oa-parent
+ * @Package : com.chenJ.model.wechat
+ * @ClassName : Menudo.java
+ * @createTime : 2024/4/24 0:39
+ * @Description :
+ */
+@Data
+@ApiModel(description = "菜单")
+@TableName("wechat_menu")
+public class MenuDO extends BaseEntity {
+
+    @ApiModelProperty(value = "id")
+    @TableField("parent_id")
+    private Long parentId;
+
+    @ApiModelProperty(value = "名称")
+    private String name;
+
+    @ApiModelProperty(value = "类型")
+    private String type;
+
+    @ApiModelProperty(value = "网页 链接，用户点击菜单可打开链接")
+    private String url;
+
+    @ApiModelProperty(value = "菜单KEY值，用于消息接口推送")
+    @TableField("meun_key")
+    private String meunKey;
+
+    @ApiModelProperty(value = "排序")
+    private Integer sort;
+
+}
