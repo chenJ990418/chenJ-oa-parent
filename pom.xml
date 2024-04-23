@@ -30,6 +30,7 @@
         <mysql.version>8.0.31</mysql.version>
         <jwt.version>0.11.2</jwt.version>
         <fastjson.version>2.0.21</fastjson.version>
+        <druid.version>1.2.19</druid.version>
     </properties>
 
     <!--配置dependencyManagement锁定依赖的版本-->
@@ -54,6 +55,11 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
