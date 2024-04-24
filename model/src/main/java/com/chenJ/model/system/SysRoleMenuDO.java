@@ -19,7 +19,6 @@ import lombok.Data;
  * @Description :
  */
 @Data
-@AllArgsConstructor
 @ApiModel(description = "角色菜单")
 @TableName("sys_role_menu")
 public class SysRoleMenuDO extends BaseEntity {

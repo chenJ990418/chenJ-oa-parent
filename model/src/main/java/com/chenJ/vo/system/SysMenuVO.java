@@ -25,9 +25,11 @@ import java.util.List;
 public class SysMenuVO extends SysMenuDO {
 
     // 下级列表
+    @ApiModelProperty(value = "下级列表")
     private List<SysMenuVO> children;
 
     //是否选中
+    @ApiModelProperty(value = "是否选中")
     private boolean isSelect;
 
 }

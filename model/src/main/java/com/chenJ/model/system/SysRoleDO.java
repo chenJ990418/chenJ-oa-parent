@@ -19,7 +19,6 @@ import lombok.Data;
  * @Description :
  */
 @Data
-@AllArgsConstructor
 @ApiModel(description = "角色")
 @TableName("sys_role")
 public class SysRoleDO extends BaseEntity {

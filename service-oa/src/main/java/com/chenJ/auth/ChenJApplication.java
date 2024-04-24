@@ -1,5 +1,6 @@
 package com.chenJ.auth;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -14,8 +15,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Description :
  */
 @SpringBootApplication
+@MapperScan(value = "com.chenJ.auth.mapper")
 public class ChenJApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ChenJApplication.class);
+        SpringApplication.run(ChenJApplication.class, args);
     }
 }
