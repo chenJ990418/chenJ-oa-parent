@@ -1,10 +1,15 @@
 package com.chenJ.auth.service.system.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.chenJ.auth.mapper.system.SysRoleMapper;
 import com.chenJ.auth.service.system.SysRoleService;
+import com.chenJ.dto.system.SysRoleQueryDTO;
 import com.chenJ.model.system.SysRoleDO;
 import com.chenJ.vo.system.SysRoleVO;
+import io.jsonwebtoken.lang.Collections;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -41,5 +46,20 @@ public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRoleDO> im
             });
         }
         return sysRoleVoList;
+    }
+
+    @Override
+    public Page getSysRoleListByPage(SysRoleQueryDTO sysRoleQueryDTO) {
+        Page<SysRoleDO> page = new Page<>(sysRoleQueryDTO.getPageNo(), sysRoleQueryDTO.getPageSize());
+        LambdaQueryWrapper<SysRoleDO> lambdaQueryWrapper = new LambdaQueryWrapper<>();
+        if (StringUtils.isNotEmpty(sysRoleQueryDTO.getRoleName())) {
+            // 封装
+            lambdaQueryWrapper.like(SysRoleDO::getRoleName, sysRoleQueryDTO.getRoleName());
+        }
+        Page<SysRoleDO> sysRoleDOPage = sysRoleMapper.selectPage(page, lambdaQueryWrapper);
+        if (!Collections.isEmpty(sysRoleDOPage.getRecords())) {
+            return sysRoleDOPage;
+        }
+        return page;
     }
 }
