@@ -2,6 +2,7 @@ package com.chenJ.auth.service.system;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.chenJ.dto.system.SysRoleDTO;
 import com.chenJ.dto.system.SysRoleQueryDTO;
 import com.chenJ.model.system.SysRoleDO;
 import com.chenJ.vo.system.SysRoleVO;
@@ -24,4 +25,7 @@ public interface SysRoleService extends IService<SysRoleDO> {
 
     Page<List<SysRoleVO>> getSysRoleListByPage(SysRoleQueryDTO sysRoleQueryDTO);
 
+    Boolean addOrUpdateSysRole(List<SysRoleDTO> sysRoleDTOList);
+
+    Boolean deleteSysRoleById(String id);
 }

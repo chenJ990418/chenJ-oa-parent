@@ -32,6 +32,7 @@
         <fastjson.version>2.0.21</fastjson.version>
         <druid.version>1.2.19</druid.version>
         <knife4j.version>3.0.3</knife4j.version>
+        <hutool.version>5.8.16</hutool.version>
     </properties>
 
     <!--配置dependencyManagement锁定依赖的版本-->
@@ -67,6 +68,12 @@
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-spring-boot-starter</artifactId>
                 <version>${knife4j.version}</version>
+            </dependency>
+            <!--hutool-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
