@@ -41,8 +41,7 @@ public class SysRoleController {
 
     @PostMapping("/getSysRoleListByPage")
     @ApiOperation(value = "分页查询角色列表")
-    public Result getSysRoleListByPage(@RequestBody SysRoleQueryDTO sysRoleQueryDTO) {// 1、创建 page 对象， 传递分页查询的参数
-        // 1、调用方法实现分页查询
+    public Result getSysRoleListByPage(@RequestBody SysRoleQueryDTO sysRoleQueryDTO) {
         Page sysRoleListByPage = sysRoleService.getSysRoleListByPage(sysRoleQueryDTO);
         return Result.success(sysRoleListByPage);
     }

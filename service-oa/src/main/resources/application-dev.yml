@@ -10,11 +10,11 @@ spring:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
       # 数据库连接URL
-      url: jdbc:mysql://127.0.0.1:7033/chenj-oa?characterEncoding=UTF-8&useSSL=false&useUnicode=true&serverTimezone=UTC
+      url: jdbc:mysql://192.168.10.108:7033/chenj-oa?characterEncoding=UTF-8&useSSL=false&useUnicode=true&serverTimezone=UTC
       # 数据库用户名
       username: root
       # 数据库密码
-      password: root
+      password: 123456
       # 连接池初始化时创建的连接数
       initialSize: 5
       # 连接池中最大连接数
