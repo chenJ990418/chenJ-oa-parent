@@ -125,7 +125,7 @@ public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRoleDO> im
         }
         UpdateWrapper<SysRoleDO> wrapper = new UpdateWrapper<>();
         wrapper.set("is_deleted", StatusConstants.isDeleted);
-        wrapper.set("id", id);
+        wrapper.eq("id", id);
         return this.update(wrapper);
     }
 

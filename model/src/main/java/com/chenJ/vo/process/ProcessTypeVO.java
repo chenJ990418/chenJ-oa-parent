@@ -1,12 +1,9 @@
 package com.chenJ.vo.process;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.chenJ.model.base.BaseEntity;
 import com.chenJ.model.process.ProcessTemplateDO;
 import com.chenJ.model.process.ProcessTypeDO;
 import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.util.List;

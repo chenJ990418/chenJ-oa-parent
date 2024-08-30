@@ -2,7 +2,6 @@ package com.chenJ.vo.system;
 
 import com.chenJ.model.system.SysUserDO;
 import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**

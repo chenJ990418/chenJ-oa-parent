@@ -2,9 +2,7 @@ package com.chenJ.vo.system;
 
 import com.chenJ.model.system.SysRoleDO;
 import io.swagger.annotations.ApiModel;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 /**
  * Created with IntelliJ IDEA.
